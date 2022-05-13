@@ -4,13 +4,14 @@ const modals = () => {
   const overlay = document.querySelector(".overlay");
 
   document.addEventListener("click", (e) => {
-    if (e.target.closest(".button")) {
+    if (e.target.closest("#headerModalOpen")) {
       e.preventDefault();
       if (!headerModal.classList.contains("header-modal--opened")) {
         headerModal.classList.add("header-modal--opened");
         overlay.style.display = "block";
       }
     } else if (e.target.closest("#servicesModalOpen")) {
+      e.preventDefault();
       if (!servicesModal.classList.contains("services-modal--opened")) {
         servicesModal.classList.add("services-modal--opened");
         overlay.style.display = "block";
