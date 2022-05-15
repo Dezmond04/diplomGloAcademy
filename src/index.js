@@ -6,4 +6,5 @@ import sliders from "./modules/sliders";
 modals();
 toTop();
 timer("20 may 2022");
+
 sliders();
