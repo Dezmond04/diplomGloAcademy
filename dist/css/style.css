@@ -1536,7 +1536,8 @@ input.error {
 .potolki .order {
   background: url(../images/order5-bg.jpg) no-repeat center;
 }
-.header-modal {
+.header-modal,
+.zoom-modal {
   display: none;
   position: fixed;
   top: 50%;
