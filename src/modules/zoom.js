@@ -1,22 +1,29 @@
 const zoom = () => {
   const zoomLink = document.querySelectorAll("#zoomLink");
-  const zoomModal = document.querySelector(".zoom-modal");
-  const zoomContainer = document.querySelector("#zoomContainer");
+  const popupZoom = document.querySelector("#popupZoom");
+  const popupZoomWrapper = document.querySelector(".popup-zoom__wrapper");
 
   zoomLink.forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
-      const img = link.querySelector("img");
-      const cloneEl = img.cloneNode(true);
+      const zoomImage = link.querySelector("img");
+      const newEl = document.createElement("img");
+      newEl.style.width = 100 + "%";
+      newEl.style.height = 100 + "%";
+      newEl.style.objectFit = "cover";
+      newEl.src = zoomImage.src;
 
-      cloneEl.style.width = 100 + "%";
-      cloneEl.style.height = 100 + "%";
+      popupZoomWrapper.append(newEl);
 
-      zoomModal.style.display = "block";
-      zoomModal.style.display = "block";
-
-      zoomContainer.append(cloneEl);
+      popupZoom.classList.add("_open");
     });
+  });
+  popupZoom.addEventListener("click", (e) => {
+    const zoomImage = popupZoomWrapper.querySelector("img");
+    if (!e.target.closest(".popup-zoom__wrapper")) {
+      zoomImage.remove();
+      popupZoom.classList.remove("_open");
+    }
   });
 };
 

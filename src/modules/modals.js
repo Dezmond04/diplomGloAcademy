@@ -6,6 +6,8 @@ const modals = () => {
   document.addEventListener("click", (e) => {
     if (e.target.closest("#headerModalOpen")) {
       e.preventDefault();
+      if (e.target.closest("#zoomLink")) {
+      }
       if (!headerModal.classList.contains("header-modal--opened")) {
         headerModal.classList.add("header-modal--opened");
         overlay.style.display = "block";

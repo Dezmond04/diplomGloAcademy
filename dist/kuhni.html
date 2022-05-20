@@ -627,6 +627,7 @@
                   <div class="form-group">
                     <div class="col-sm-12">
                       <input
+                      data-validate-name
                         type="text"
                         name="fio"
                         class="form-control required"
@@ -654,6 +655,7 @@
                           value="Кухни и шкафы-купе"
                         />
                         <button
+                        id="sendFormBtn"
                           type="submit"
                           class="btn btn-warning btn-block feedback"
                         >
@@ -860,19 +862,19 @@
     		</div>
     		<div class="text-center">
 	    		<div class="col-sm-4">
-	    			<a href="images/documents/original/document4.jpg" class="sertificate-document" data-fancybox-group="gallery-documents">
+	    			<a id="zoomLink" href="images/documents/original/document4.jpg" class="sertificate-document" data-fancybox-group="gallery-documents">
 	    				<img src="images/documents/document4.jpg" class="img-responsive" alt="">
 	    				<div class="document-overlay"></div>
 	    			</a>
 	    		</div>
 	    		<div class="col-sm-4">
-	    			<a href="images/documents/original/document4.jpg" class="sertificate-document" data-fancybox-group="gallery-documents">
+	    			<a id="zoomLink" href="images/documents/original/document4.jpg" class="sertificate-document" data-fancybox-group="gallery-documents">
 	    				<img src="images/documents/document4.jpg" class="img-responsive" alt="">
 	    				<div class="document-overlay"></div>
 	    			</a>
 	    		</div>
 	    		<div class="col-sm-4">
-	    			<a href="images/documents/original/document4.jpg" class="sertificate-document" data-fancybox-group="gallery-documents">
+	    			<a id="zoomLink" href="images/documents/original/document4.jpg" class="sertificate-document" data-fancybox-group="gallery-documents">
 	    				<img src="images/documents/document4.jpg" class="img-responsive" alt="">
 	    				<div class="document-overlay"></div>
 	    			</a>
@@ -909,6 +911,7 @@
                   <div class="form-group">
                     <div class="col-sm-12">
                       <input
+                      data-validate-name
                         type="text"
                         name="fio"
                         class="form-control required"
@@ -936,6 +939,7 @@
                           value="Кухни и шкафы-купе"
                         />
                         <button
+                        id="sendFormBtn"
                           type="submit"
                           class="btn btn-warning btn-block feedback"
                         >
@@ -1083,6 +1087,7 @@
         <form name="callback-form">
           <div class="form-group">
             <input
+            data-validate-name
               type="text"
               name="fio"
               class="form-control required"
@@ -1100,7 +1105,7 @@
           </div>
           <div class="form-action">
             <div class="text-center">
-              <button type="submit" class="btn btn-warning feedback">
+              <button id="sendFormBtn" type="submit" class="btn btn-warning feedback">
                 Свяжитесь со мной!
               </button>
             </div>
@@ -1131,6 +1136,7 @@
         <form name="order-form">
           <div class="form-group">
             <input
+            data-validate-name
               type="text"
               name="fio"
               class="form-control required"
@@ -1148,7 +1154,7 @@
           </div>
           <div class="form-action">
             <div class="text-center">
-              <button type="submit" class="btn btn-success feedback">
+              <button  id="sendFormBtn" type="submit" class="btn btn-success feedback">
                 Принять участие!
               </button>
             </div>
@@ -1176,6 +1182,7 @@
         <form name="application-form">
           <div class="form-group">
             <input
+            data-validate-name
               type="text"
               name="fio"
               class="form-control required"
@@ -1193,7 +1200,7 @@
           </div>
           <div class="form-action">
             <div class="text-center">
-              <button type="submit" class="btn btn-success feedback">
+              <button id="sendFormBtn" type="submit" class="btn btn-success feedback">
                 Вызвать замерщика!
               </button>
             </div>
@@ -1233,13 +1240,13 @@
             <p class="text-center">Оставьте, пожалуйста, заявку. Мы позвоним Вам в ближайшее время и ответим на все вопросы!</p>
             <form name="callback-form">
                 <div class="form-group">
-                    <input type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
+                    <input data-validate-name type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
                 </div>
                 <div class="form-group">
                     <input type="text" name="phone" class="form-control required" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99">
                 </div>
                 <div class="form-action">
-                    <div class="text-center"><button type="submit" class="btn btn-warning feedback">Свяжитесь со мной!</button></div>
+                    <div class="text-center"><button id="sendFormBtn" type="submit" class="btn btn-warning feedback">Свяжитесь со мной!</button></div>
                 </div>
                 <input type="hidden" name="page" value="Окна">
             </form>
@@ -1259,13 +1266,13 @@
 				<p class="text-center">Оставьте заявку и специалист свяжется с Вами в ближайшее время!</p>
 				<form name="application-form">
 					<div class="form-group">
-						<input type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
+						<input data-validate-name type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
 					</div>
 					<div class="form-group">
 						<input type="text" name="phone" class="form-control required" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99">
 					</div>
 					<div class="form-action">
-						<div class="text-center"><button type="submit" class="btn btn-success feedback">Вызвать замерщика!</button></div>
+						<div class="text-center"><button id="sendFormBtn" type="submit" class="btn btn-success feedback">Вызвать замерщика!</button></div>
 					</div>
 					<input type="hidden" name="page" value="Окна">
 					<input type="hidden" name="subject" value="Стандартные ПВХ-окна">
@@ -1274,6 +1281,11 @@
 			</div>
 		</div></div></div>
 		<span title="Close" class="services-modal__close">x</span></div>
+	</div>
+
+  <div id="popupZoom" class="popup-zoom">
+		<div class="popup-zoom__wrapper">
+		</div>
 	</div>
 
 	<div class="smooth-scroll">

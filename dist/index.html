@@ -284,22 +284,22 @@
     					<div class="order-form rf">
     						<h3 class="order-form-heading">Оставить заявку</h3>
     						<div class="order-form-subheading">на получение скидки 20%</div>
-    						<form name="action-form" class="form-horizontal">
+    						<form id="form3" name="action-form" class="form-horizontal">
     							<div class="form-group">
     								<div class="col-sm-12">
-    									<input type="text" name="fio" class="form-control required" placeholder="ваше имя">
+    									<input data-validate-name type="text" name="fio" class="form-control required" placeholder="ваше имя">
     								</div>
     							</div>
     							<div class="form-group">
     								<div class="col-sm-12">
-    									<input type="text" name="phone" class="form-control required" placeholder="ваш телефон" data-mask="+7 (999) 999-99-99">
+    									<input data-validate-phone type="text" name="phone" class="form-control required" placeholder="ваш телефон" data-mask="+7 (999) 999-99-99">
     								</div>
     							</div>
     							<div class="form-group">
     								<div class="col-sm-12">
     									<div class="order-form-button">
     									    <input type="hidden" name="page" value="Окна">
-    										<button type="submit" class="btn btn-warning btn-block feedback">Получить скидку!</button>
+    										<button id="sendFormBtn" type="submit" class="btn btn-warning btn-block feedback">Получить скидку!</button>
     									</div>
     								</div>
     							</div>
@@ -435,7 +435,7 @@
 	    				<div class="document-overlay"></div>
 	    			</a>
 	    		</div>
-	    		<div class="col-sm-4">
+	    		<div  class="col-sm-4">
 	    			<a id="zoomLink" href="images/documents/original/document4.jpg" class="sertificate-document" data-fancybox-group="gallery-documents">
 	    				<img src="images/documents/document4.jpg" class="img-responsive" alt="">
 	    				<div class="document-overlay"></div>
@@ -472,22 +472,22 @@
     					<div class="order-form rf">
     						<h3 class="order-form-heading">Оставить заявку</h3>
     						<div class="order-form-subheading">на получение скидки 20%</div>
-    						<form name="action-form2" class="form-horizontal">
+    						<form id="form4" name="action-form3" class="form-horizontal">
     							<div class="form-group">
     								<div class="col-sm-12">
-    									<input type="text" name="fio" class="form-control required" placeholder="ваше имя">
+    									<input data-validate-name type="text" name="fio" class="form-control required" placeholder="ваше имя">
     								</div>
     							</div>
     							<div class="form-group">
     								<div class="col-sm-12">
-    									<input type="text" name="phone" class="form-control required" placeholder="ваш телефон" data-mask="+7 (999) 999-99-99">
+    									<input data-validate-phone type="text" name="phone" class="form-control required" placeholder="ваш телефон" data-mask="+7 (999) 999-99-99">
     								</div>
     							</div>
     							<div class="form-group">
     								<div class="col-sm-12">
     									<div class="order-form-button">
     									    <input type="hidden" name="page" value="Окна">
-    										<button type="submit" class="btn btn-warning btn-block feedback">Получить скидку</button>
+    										<button id="sendFormBtn" type="submit" class="btn btn-warning btn-block feedback">Получить скидку</button>
     									</div>
     								</div>
     							</div>
@@ -588,15 +588,15 @@
         </div>
         <div class="box-modal_body rf">
             <p class="text-center">Оставьте, пожалуйста, заявку. Мы позвоним Вам в ближайшее время и ответим на все вопросы!</p>
-            <form name="callback-form">
+            <form  name="callback-form">
                 <div class="form-group">
-                    <input type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
+                    <input data-validate-name type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
                 </div>
                 <div class="form-group">
-                    <input type="text" name="phone" class="form-control required" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99">
+                    <input data-validate-phone type="text" name="phone" class="form-control required" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99">
                 </div>
                 <div class="form-action">
-                    <div class="text-center"><button type="submit" class="btn btn-warning feedback">Свяжитесь со мной!</button></div>
+                    <div id="sendFormBtn" class="text-center"><button type="submit" class="btn btn-warning feedback">Свяжитесь со мной!</button></div>
                 </div>
                 <input type="hidden" name="page" value="Окна">
             </form>
@@ -613,13 +613,13 @@
             <p class="text-center">Оставьте, пожалуйста, заявку и мы свяжемся с Вами, чтобы рассказать детали акции и Вашу скидку!</p>
             <form name="order-form">
                 <div class="form-group">
-                    <input type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
+                    <input data-validate-name type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
                 </div>
                 <div class="form-group">
-                    <input type="text" name="phone" class="form-control required" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99">
+                    <input data-validate-phone type="text" name="phone" class="form-control required" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99">
                 </div>
                 <div class="form-action">
-                    <div class="text-center"><button type="submit" class="btn btn-success feedback">Принять участие!</button></div>
+                    <div id="sendFormBtn" class="text-center"><button type="submit" class="btn btn-success feedback">Принять участие!</button></div>
                 </div>
                 <input type="hidden" name="page" value="Окна">
             </form>
@@ -634,15 +634,15 @@
         </div>
         <div class="box-modal_body rf">
             <p class="text-center">Оставьте заявку и специалист свяжется с Вами в ближайшее время!</p>
-            <form name="application-form">
+            <form id="form3" name="application-form">
                 <div class="form-group">
-                    <input type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
+                    <input data-validate-name type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
                 </div>
                 <div class="form-group">
-                    <input type="text" name="phone" class="form-control required" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99">
+                    <input data-validate-phone type="text" name="phone" class="form-control required" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99">
                 </div>
                 <div class="form-action">
-                    <div class="text-center"><button type="submit" class="btn btn-success feedback">Вызвать замерщика!</button></div>
+                    <div id="sendFormBtn" class="text-center"><button type="submit" class="btn btn-success feedback">Вызвать замерщика!</button></div>
                 </div>
                 <input type="hidden" name="page" value="Окна">
                 <input type="hidden" name="subject">
@@ -676,16 +676,16 @@
 					<div class="box-modal_body rf">
 						<p class="text-center">Оставьте, пожалуйста, заявку. Мы позвоним Вам в ближайшее время и ответим на
 							все вопросы!</p>
-						<form name="callback-form">
+						<form id="form1" name="callback-form">
 							<div class="form-group">
-								<input type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
+								<input data-validate-name type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
 							</div>
 							<div class="form-group">
-								<input type="text" name="phone" class="form-control required"
+								<input data-validate-phone type="text" name="phone" class="form-control required"
 									placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99">
 							</div>
 							<div class="form-action">
-								<div class="text-center"><button type="submit" class="btn btn-warning feedback">Свяжитесь
+								<div id="sendFormBtn" class="text-center"><button type="submit" class="btn btn-warning feedback">Свяжитесь
 										со мной!</button></div>
 							</div>
 							<input type="hidden" name="page" value="Окна">
@@ -710,6 +710,11 @@
 	</div>
 	</div>
 
+	<div id="popupZoom" class="popup-zoom">
+		<div class="popup-zoom__wrapper">
+		</div>
+	</div>
+
 	<div class="services-modal">
 			<div class="fancybox-skin" style="padding: 0px; width: auto; height: auto;">
 				<div class="fancybox-outer">
@@ -720,15 +725,15 @@
 			</div>
 			<div class="box-modal_body rf">
 				<p class="text-center">Оставьте заявку и специалист свяжется с Вами в ближайшее время!</p>
-				<form name="application-form">
+				<form id="form2" name="application-form">
 					<div class="form-group">
-						<input type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
+						<input data-validate-name type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
 					</div>
 					<div class="form-group">
-						<input type="text" name="phone" class="form-control required" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99">
+						<input data-validate-phone type="text" name="phone" class="form-control required" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99">
 					</div>
 					<div class="form-action">
-						<div class="text-center"><button type="submit" class="btn btn-success feedback">Вызвать замерщика!</button></div>
+						<div id="sendFormBtn" class="text-center"><button type="submit" class="btn btn-success feedback">Вызвать замерщика!</button></div>
 					</div>
 					<input type="hidden" name="page" value="Окна">
 					<input type="hidden" name="subject" value="Стандартные ПВХ-окна">

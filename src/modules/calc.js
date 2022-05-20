@@ -5,19 +5,19 @@ const calc = () => {
   const calcInput = document.querySelector("#calc-input");
   const calcTotal = document.querySelector("#calc-total");
 
-  calc.addEventListener("input", (e) => {
-    let total = 1;
-    console.log(calcTotal.value);
-
-    if (
-      calcType.value !== "--" &&
-      calcTypeMaterial.value !== "--" &&
-      calcInput.value !== ""
-    ) {
-      total = calcType.value * calcTypeMaterial.value * calcInput.value;
-      calcTotal.value = total;
-    }
-  });
+  if (document.querySelector("#calc")) {
+    calc.addEventListener("input", (e) => {
+      let total = 1;
+      if (
+        calcType.value !== "--" &&
+        calcTypeMaterial.value !== "--" &&
+        calcInput.value !== ""
+      ) {
+        total = calcType.value * calcTypeMaterial.value * calcInput.value;
+        calcTotal.value = Math.floor(total);
+      }
+    });
+  }
 };
 
 export default calc;
