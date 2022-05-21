@@ -1,6 +1,7 @@
 const sendForm = ({ formId, someElem = [] }) => {
   const form = document.querySelector(`#${formId}`);
   const statusBlock = document.createElement("div");
+  statusBlock.style.textAlign = "center";
   const loadText = "Загрузка";
   const errorText = "Ошибка";
   const successText = "Спасибо! Наш менеджер с вами свяжется";

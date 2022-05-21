@@ -9,7 +9,7 @@ import sendForm from "./modules/sendForm";
 
 modals();
 toTop();
-timer("20 may 2022 22:00");
+timer("23 may 2022 22:00");
 sliders();
 calc();
 zoom();

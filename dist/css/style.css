@@ -1544,21 +1544,28 @@ input.error {
 }
 .header-modal,
 .zoom-modal {
-  display: none;
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
   z-index: 9999;
+  transition: all 0.3s;
 }
 
 .services-modal {
-  display: none;
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
   z-index: 9999;
+  transition: all 0.3s;
+}
+.services-modal--opened {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  transition: all 0.3s;
 }
 
 .services-modal--opened {
@@ -1567,6 +1574,9 @@ input.error {
 
 .header-modal--opened {
   display: block;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  transition: all 0.3s;
 }
 .header-modal--opened .box-modal {
   display: block;
