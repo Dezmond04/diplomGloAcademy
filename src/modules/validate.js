@@ -90,7 +90,7 @@ const validate = () => {
           } else if (input.value.match(/[0-9\()\-\+]/g)) {
             const err = document.querySelector("[data-validation-phone-err]");
             err.textContent = "Телефон должен состоять более чем из 6 символов";
-            console.log(err.textContent);
+            
           }
         } else if (
           input.value.length > 6 &&
