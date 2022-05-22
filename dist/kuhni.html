@@ -638,6 +638,7 @@
                   <div class="form-group">
                     <div class="col-sm-12">
                       <input
+                      data-validate-phone
                         type="text"
                         name="phone"
                         class="form-control required"
@@ -922,6 +923,7 @@
                   <div class="form-group">
                     <div class="col-sm-12">
                       <input
+                      data-validate-phone
                         type="text"
                         name="phone"
                         class="form-control required"
@@ -1243,7 +1245,7 @@
                     <input data-validate-name type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
                 </div>
                 <div class="form-group">
-                    <input type="text" name="phone" class="form-control required" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99">
+                    <input data-validate-phone type="text" name="phone" class="form-control required" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99">
                 </div>
                 <div class="form-action">
                     <div class="text-center"><button id="sendFormBtn" type="submit" class="btn btn-warning feedback">Свяжитесь со мной!</button></div>
@@ -1285,7 +1287,9 @@
 
   <div id="popupZoom" class="popup-zoom">
 		<div class="popup-zoom__wrapper">
+      <span title="Close" class="popup-zoom__close">x</span>
 		</div>
+
 	</div>
 
 	<div class="smooth-scroll">

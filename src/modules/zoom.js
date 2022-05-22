@@ -20,7 +20,10 @@ const zoom = () => {
   });
   popupZoom.addEventListener("click", (e) => {
     const zoomImage = popupZoomWrapper.querySelector("img");
-    if (!e.target.closest(".popup-zoom__wrapper")) {
+    if (
+      !e.target.closest(".popup-zoom__wrapper") ||
+      e.target.closest(".popup-zoom__close")
+    ) {
       zoomImage.remove();
       popupZoom.classList.remove("_open");
     }

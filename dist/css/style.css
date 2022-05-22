@@ -1750,6 +1750,15 @@ input.error {
   transform: translate(-50%, -50%) scale(1);
   transition: all 0.3s;
 }
+.popup-zoom__close {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  z-index: 10;
+  color: #000;
+  cursor: pointer;
+  font-size: 32px;
+}
 .sertificate-document .document-overlay {
   transition: opacity 0.3s;
 }
