@@ -75,14 +75,32 @@ const validate = () => {
           input.classList.contains("_error") &&
           document.querySelector("[data-validation-phone-err]")
         ) {
+        }
+        if (input.value == "") {
+          sendCheckPhone = false;
+        } else if (input.value.length < 6) {
+          sendCheckPhone = false;
+
+          if (!document.querySelector("[data-validation-phone-err]")) {
+            newEl.setAttribute("data-validation-phone-err", "");
+            newEl.textContent = "";
+            e.target.after(newEl);
+            input.classList.add("_error");
+            input.style.boxShadow = "0px 0px 1px 1px red";
+          } else if (input.value.match(/[0-9\()\-\+]/g)) {
+            const err = document.querySelector("[data-validation-phone-err]");
+            err.textContent = "Телефон должен состоять более чем из 6 символов";
+            console.log(err.textContent);
+          }
+        } else if (
+          input.value.length > 6 &&
+          document.querySelector("[data-validation-phone-err]")
+        ) {
           const err = document.querySelector("[data-validation-phone-err]");
-          err.remove();
+          sendCheckPhone = true;
           input.classList.remove("_error");
           input.style.boxShadow = "";
-        } else if (input.value == "") {
-          sendCheckPhone = false;
-        } else if (input.value.length > 6) {
-          sendCheckPhone = true;
+          err.remove();
         }
         input.value = input.value.replace(/[^0-9\+]/g, "");
       }
